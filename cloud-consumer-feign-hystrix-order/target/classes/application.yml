@@ -1,0 +1,35 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-service-service
+
+
+eureka:
+  client:
+    register-with-eureka: false
+#    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+
+# 开启hystrix
+feign:
+  hystrix:
+    enabled: true
+  client:
+    config:
+      default:
+        connectionTimeout: 7000
+        readTimeout: 7000
+
+#设置feign客户端超时时间（openFeign默认支持ribbon）；
+ribbon:
+  #指建立连接后，服务读取可用资源的所用时间；
+  ReadTimeout: 7000
+  #指建立连接所用时间，适用于网络状态正常的情况下，两端连接所用时间
+  ConnectTimeout: 7000
+logging:
+  level:
+    # feign 日志以什么界别监控哪个接口
+    com.wenruo.service.PaymentFeignService: debug

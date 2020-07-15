@@ -1,0 +1,5 @@
+com\wenruo\controller\OrderFeignController.class
+com\wenruo\service\PaymentFeignService.class
+com\wenruo\service\PaymentHysTrixService.class
+com\wenruo\config\FeignConfig.class
+com\wenruo\OpenFeignMain80.class
