@@ -1,7 +1,6 @@
 package com.wenruo;
 
 import com.netflix.hystrix.contrib.metrics.eventstream.HystrixMetricsStreamServlet;
-import com.netflix.hystrix.contrib.requests.stream.HystrixRequestEventsSseServlet;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
